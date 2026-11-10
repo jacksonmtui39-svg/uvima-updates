@@ -2,7 +2,7 @@
 <html lang="sw">
 <head>
 <meta charset="utf-8">
-<meta name="uvima-web-version" content="2">
+<meta name="uvima-web-version" content="3">
 <meta name="uvima-min-apk" content="3">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>UVIMA Ufuatiliaji wa Mikopo</title>
@@ -161,7 +161,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 </script>
 <script>
 const EMBED = {"members": {}, "loans": [], "src": "Bado haijapakiwa"};
-const KEY='uvima_mikopo_v1',BKEY='uvima_base_v1',WEBV=2;
+const KEY='uvima_mikopo_v1',BKEY='uvima_base_v1',WEBV=3;
 /* Android: hand records over from the old file:// address (app 1.0/1.1) to the new one */
 (function(){const A=window.AndroidApp;if(!A||typeof A.migrateOut!=='function')return;
   try{if(location.protocol==='file:'){const g=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
@@ -261,7 +261,7 @@ let VIEW='dash',CUR=null,LF={q:'',cat:'red',k:'',st:'',sort:'arr'};
 function show(v){VIEW=v;document.querySelectorAll('main>section').forEach(s=>{s.classList.add('hide');if(s.id!=='v-'+v)s.innerHTML=''});$('#v-'+v).classList.remove('hide');
   document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v||(v==='prof'&&b.dataset.v==='list')));
   render();window.scrollTo(0,0)}
-function render(){$('#hdrSub').textContent='Hesabu hadi tarehe '+fd(asof())+' · Kiwango cha hatari: >'+S.settings.thr+'%'+(S.settings.officer?' · Afisa: '+S.settings.officer:'')+(NATIVE?' · App ya Android'+(S.settings.sms.auto?' · SMS za moja kwa moja: ZIMEWASHWA':''):'');
+function render(){$('#hdrSub').textContent='Hesabu hadi tarehe '+fd(asof())+' · Kiwango cha hatari: >'+S.settings.thr+'%'+(S.settings.officer?' · Afisa: '+S.settings.officer:'')+(NATIVE?' · App ya Android'+(S.settings.sms.auto?' · SMS za moja kwa moja: ZIMEWASHWA':''):'')+' · Toleo '+WEBV;
   ({dash:rDash,list:rList,prof:rProf,prom:rProm,sms:rSms,set:rSet,com:rCom,rep:rRep,succ:rSucc})[VIEW]()}
 
 function rDash(){
